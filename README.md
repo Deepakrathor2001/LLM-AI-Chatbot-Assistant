@@ -207,5 +207,5 @@ Deepak Rathor
 My name is Deepak. AI/ML Engineer | Machine Learning | NLP | Large Lanuage Model | LLM Applications | RAG
 I am passionate about Artificial Intelligence and Machine Learning. I enjoy solving problems and building real-world projects.
 
-# Important Informarmation 
+# Important Information 
 I cannot share my API key so please if you want to use this project than create .env file and upload your personal API key of any AI tool like i am using Google Gemini 2.5 API key.
