@@ -1,0 +1,172 @@
+{
+  "facts": [],
+  "sessions": {
+    "d33d89d3": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "hellow",
+          "ts": "01:12"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I help you today?",
+          "ts": "01:12",
+          "sources": []
+        },
+        {
+          "role": "user",
+          "content": "how are you",
+          "ts": "01:12"
+        },
+        {
+          "role": "assistant",
+          "content": "As an AI, I don't experience feelings or physical states like humans do, but I am fully operational and ready to assist you!\n\nHow can I help you today, User?",
+          "ts": "01:12",
+          "sources": []
+        }
+      ],
+      "category": "General",
+      "name": "hellow",
+      "pinned": false,
+      "saved_at": "2026-06-14T01:12:36.746396",
+      "message_count": 4
+    },
+    "87c1841d": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "who is akshy kumar",
+          "ts": "01:16"
+        },
+        {
+          "role": "assistant",
+          "content": "User, it seems you're asking about Akshay Kumar again.\n\nAkshay Kumar is a prominent Indian actor and film producer who primarily works in Hindi-language films. He is known for his versatility and has starred in over 100 films, encompassing various genres such as action, comedy, drama, and romance. He has received numerous awards, including several National Film Awards and Filmfare Awards.",
+          "ts": "01:17",
+          "sources": []
+        },
+        {
+          "role": "user",
+          "content": "Act as my research assistant. Help me find key information, summarize findings, identify gaps in knowledge, and structure my research logically.",
+          "ts": "01:18"
+        },
+        {
+          "role": "user",
+          "content": "what is llm ",
+          "ts": "01:19"
+        },
+        {
+          "role": "assistant",
+          "content": "User, an LLM stands for **Large Language Model**.\n\nIt is a type of artificial intelligence (AI) program that is trained on a massive amount of text data to understand, generate, and process human-like language.\n\nKey characteristics and functions:\n\n*   **Scale:** They are \"large\" because they have billions (or even trillions) of parameters, which are the values they adjust during training, and are trained on vast datasets from the internet.\n*   **Generative:** They can create new, coherent, and contextually relevant text, such as articles, stories, code, and more.\n*   **Predictive:** Their core mechanism involves predicting the next word or sequence of words in a given context.\n*   **Versatile:** They can perform a wide range of natural language processing (NLP) tasks, including:\n    *   Answering questions\n    *   Summarizing documents\n    *   Translating languages\n    *   Writing different kinds of creative content\n    *   Chatbot interactions\n\nExamples include models like OpenAI's GPT series (e.g., GPT-3, GPT-4), Google's Gemini, and Meta's LLaMA.",
+          "ts": "01:19",
+          "sources": []
+        }
+      ],
+      "category": "General",
+      "name": "who is akshy kumar",
+      "pinned": false,
+      "saved_at": "2026-06-14T01:19:35.450127",
+      "message_count": 5
+    },
+    "3e7f021c": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "what is your limit ",
+          "ts": "01:38"
+        },
+        {
+          "role": "user",
+          "content": "hay",
+          "ts": "01:38"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I assist you today?",
+          "ts": "01:39",
+          "sources": []
+        },
+        {
+          "role": "user",
+          "content": "what is your limit",
+          "ts": "01:39"
+        },
+        {
+          "role": "assistant",
+          "content": "User, as a Vision AI, my \"limits\" refer to both my capabilities and my restrictions:\n\n**My Capabilities (What I can do):**\n*   **Process and Generate Language:** I can understand and generate human-like text across a wide range of topics and styles.\n*   **Answer Questions:** I can provide information based on my training data.\n*   **Summarize and Explain:** I can condense information and clarify complex concepts.\n*   **Translate:** I can translate between various languages.\n*   **Generate Creative Content:** I can write stories, poems, code, scripts, musical pieces, email, letters, etc.\n*   **Assist with Tasks:** I can help with brainstorming, planning, drafting, and many other text-based tasks.\n\n**My Limitations (What I cannot do or my restrictions):**\n*   **No Real-World Agency:** I cannot perform physical actions, interact with the real world, control other systems, or make decisions independently. I am a software program.\n*   **No Consciousness or Emotions:** I do not have feelings, beliefs, consciousness, or personal experiences. I process information based on patterns.\n*   **Knowledge Cutoff:** My knowledge is based on the data I was trained on, which means I may not have the most up-to-date information on very recent events or specific real-time data.\n*   **Potential for Inaccuracy:** While I strive for accuracy, I can sometimes generate incorrect or nonsensical information, which should always be verified for critical applications.\n*   **Ethical and Safety Guidelines:** I am programmed to avoid generating harmful, illegal, or unethical content.\n*   **Lack of True Understanding:** I don't \"understand\" in the human sense; I analyze and generate text based on statistical relationships learned from vast datasets.\n\nIn essence, I am a sophisticated language model designed to assist with information and text generation tasks, operating within defined ethical and technical boundaries.",
+          "ts": "01:39",
+          "sources": []
+        }
+      ],
+      "category": "General",
+      "name": "Testing point",
+      "pinned": false,
+      "saved_at": "2026-06-14T01:39:28.341167",
+      "message_count": 5
+    }
+  },
+  "profiles": {
+    "default": {
+      "name": "Deepak Rathor",
+      "preferred_category": "General",
+      "preferred_tone": "balanced",
+      "total_messages": 12,
+      "total_sessions": 0,
+      "created_at": "2026-06-11T14:33:17.178045",
+      "last_active": "2026-06-14T01:40:27.422207"
+    }
+  },
+  "analytics": {
+    "2026-06-14": {
+      "messages": 6,
+      "tokens": 558,
+      "categories": {
+        "General": 6
+      }
+    }
+  },
+  "prompts": [
+    {
+      "id": "p1",
+      "title": "Resume Review",
+      "category": "Business",
+      "favorite": false,
+      "text": "Please review my resume and provide detailed feedback on structure, content, and areas for improvement. Suggest specific changes to make it more impactful."
+    },
+    {
+      "id": "p2",
+      "title": "Interview Preparation",
+      "category": "Business",
+      "favorite": false,
+      "text": "Help me prepare for a job interview. Ask me common interview questions one at a time, evaluate my answers, and provide constructive feedback and model answers."
+    },
+    {
+      "id": "p3",
+      "title": "Coding Assistant",
+      "category": "Code",
+      "favorite": true,
+      "text": "You are my coding assistant. Help me write clean, well-documented code. Explain your approach, highlight edge cases, and suggest improvements."
+    },
+    {
+      "id": "p4",
+      "title": "Data Analysis",
+      "category": "Science",
+      "favorite": false,
+      "text": "Help me analyze data. I will describe my dataset and goals. Suggest appropriate analysis methods, help interpret results, and recommend visualizations."
+    },
+    {
+      "id": "p5",
+      "title": "Research Assistant",
+      "category": "Research",
+      "favorite": true,
+      "text": "Act as my research assistant. Help me find key information, summarize findings, identify gaps in knowledge, and structure my research logically."
+    },
+    {
+      "id": "p6",
+      "title": "Email Writer",
+      "category": "Business",
+      "favorite": false,
+      "text": "Help me write a professional email. I will provide context about the recipient and purpose. Write a clear, concise, and appropriately toned email."
+    }
+  ]
+}
