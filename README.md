@@ -1,4 +1,4 @@
-# LLM AI Chatbot with RAG and Memory
+# Vision AI - LLM Chatbot with RAG and Memory
 
 An intelligent AI chatbot built using Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and conversation memory. The chatbot can answer user queries using both its language model capabilities and information retrieved from custom documents, making responses more accurate, contextual, and relevant.
 
@@ -168,7 +168,6 @@ Through this project, I gained practical experience in:
 * Source citation support
 * Multi-language capabilities
 * Agent-based workflows
-* Deployment on cloud platforms
 
 ## Installation
 
