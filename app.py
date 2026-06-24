@@ -1,7 +1,5 @@
 """
-Vision AI - Intermediate LLM Chatbot Dashboard
-100% Python + Streamlit only. Zero HTML. Zero CSS. Zero unsafe_allow_html.
-All features preserved: Chat, RAG, Memory, Prompt Library, Analytics, Export, Themes.
+Vision AI - LLM Chatbot 
 """
 
 import os, sys, uuid, json, datetime, io, csv
@@ -13,7 +11,7 @@ from google import genai
 import plotly.graph_objects as go
 import pandas as pd
 
-# ─── Path & imports ───────────────────────────────────────────────────────────
+# ─── Path & imports
 BASE_DIR = Path(__file__).resolve().parent
 if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
@@ -33,7 +31,7 @@ from memory_system import (get_short_term_context, save_session_to_long_term,
                             delete_prompt, toggle_favorite_prompt)
 from prompt_engine import (assemble_full_prompt, CATEGORY_PROMPTS, TONE_MODIFIERS)
 
-# ─── Constants ────────────────────────────────────────────────────────────────
+# ─── Constants 
 DEFAULT_MODEL = "gemini-2.5-flash"
 UPLOADS_DIR   = BASE_DIR / "data" / "uploads"
 EXPORTS_DIR   = BASE_DIR / "data" / "exports"
@@ -42,7 +40,7 @@ EXPORTS_DIR.mkdir(parents=True, exist_ok=True)
 CATEGORIES    = list(CATEGORY_PROMPTS.keys())
 TONES         = list(TONE_MODIFIERS.keys())
 
-# ─── Page config ──────────────────────────────────────────────────────────────
+# ─── Page config
 st.set_page_config(
     page_title="Vision AI",
     page_icon="V",
@@ -50,7 +48,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# ─── Session state ────────────────────────────────────────────────────────────
+# ─── Session state 
 def ss(k, v):
     if k not in st.session_state:
         st.session_state[k] = v
@@ -71,7 +69,7 @@ ss("show_new_prompt",   False)
 ss("last_response",     "")
 ss("web_search_on",     False)
 
-# ─── Gemini helpers ───────────────────────────────────────────────────────────
+# ─── Gemini API
 def get_api_key():
     key = os.getenv("GOOGLE_API_KEY", "").strip()
     if not key:
@@ -82,7 +80,7 @@ def get_api_key():
 def get_client():
     return genai.Client(api_key=get_api_key())
 
-# ─── Export helpers ───────────────────────────────────────────────────────────
+# ─── Export helpers
 def export_txt() -> str:
     lines = [f"Vision AI Export\nDate: {datetime.datetime.now():%Y-%m-%d %H:%M}\n{'='*50}\n"]
     for m in st.session_state.messages:
@@ -102,9 +100,8 @@ def export_json() -> str:
     return json.dumps(st.session_state.messages, indent=2, ensure_ascii=False)
 
 
-# ══════════════════════════════════════════════════════════════════
 #  SIDEBAR
-# ══════════════════════════════════════════════════════════════════
+
 with st.sidebar:
 
     # Brand
@@ -183,15 +180,12 @@ with st.sidebar:
         st.caption("No recent chats")
 
 
-# ══════════════════════════════════════════════════════════════════
+
 #  MAIN PAGES
-# ══════════════════════════════════════════════════════════════════
 page = st.session_state.active_page
 
 
-# ════════════════════════════════
 #  PAGE: CHAT
-# ════════════════════════════════
 if page == "Chat":
 
     # Header
@@ -342,9 +336,9 @@ if page == "Chat":
         st.rerun()
 
 
-# ════════════════════════════════
+
 #  PAGE: KNOWLEDGE BASE
-# ════════════════════════════════
+
 elif page == "Knowledge Base":
     st.title("Knowledge Base")
     st.caption("Upload documents and enable RAG to ground answers in your files.")
@@ -414,9 +408,8 @@ elif page == "Knowledge Base":
                 st.info("No relevant content found in indexed documents.")
 
 
-# ════════════════════════════════
 #  PAGE: MEMORY
-# ════════════════════════════════
+
 elif page == "Memory":
     st.title("Memory System")
     st.caption("Manage conversation history, long-term facts, and session data.")
@@ -501,9 +494,9 @@ elif page == "Memory":
         st.info("No saved sessions yet.")
 
 
-# ════════════════════════════════
+
 #  PAGE: PROMPT LIBRARY
-# ════════════════════════════════
+
 elif page == "Prompt Library":
     st.title("Prompt Library")
     st.caption("Manage, search, and use pre-built prompts for common tasks.")
@@ -617,9 +610,8 @@ elif page == "Prompt Library":
                     st.rerun()
 
 
-# ════════════════════════════════
-#  PAGE: ANALYTICS
-# ════════════════════════════════
+
+#  PAGE: ANALYTIC
 elif page == "Analytics":
     st.title("Analytics Dashboard")
     st.caption("Track your usage across daily, weekly, and monthly periods.")
@@ -723,9 +715,9 @@ elif page == "Analytics":
                 st.plotly_chart(fig_heat, use_container_width=True)
 
 
-# ════════════════════════════════
+
 #  PAGE: SETTINGS
-# ════════════════════════════════
+
 elif page == "Settings":
     st.title("Settings")
     st.caption("Manage your profile, preferences, and API configuration.")
